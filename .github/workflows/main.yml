@@ -1,0 +1,12 @@
+name: Secret Example
+
+on:
+  workflow_dispatch:
+
+jobs:
+  secretjob:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Printing Secret
+        run: echo "${{ secrets.password }}"
